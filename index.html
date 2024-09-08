@@ -20,7 +20,26 @@
                 <i class="fa-brands fa-instagram fa-xl mx-2"></i><Strong>Instagram</Strong>
             </a>
             <div class="d-flex justify-content-end">
-                <button type="button" class="btn btn-success">Create a new post</button>
+                <button type="button" class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#exampleModal">Create a new post</button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle mx-2" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
@@ -46,13 +65,13 @@
     <div class="container d-flex justify-content-center mt-5">
         <ul class="nav" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
-                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#grid-tab-pane"
+                    type="button" role="tab" aria-controls="grid-tab-pane" aria-selected="true"><i
                         class="fa-solid fa-table-cells fa-xl"></i></button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
-                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#scroll-tab-pane"
+                    type="button" role="tab" aria-controls="scroll-tab-pane" aria-selected="false"><i
                         class="fa-solid fa-square fa-xl"></i></button>
             </li>
         </ul>
@@ -64,11 +83,11 @@
     <!--  Vista Grid  -->
 
     <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+        <div class="tab-pane fade show active" id="grid-tab-pane" role="tabpanel" aria-labelledby="grid-tab"
             tabindex="0">
 
             <div class="container-fluid">
-                <div class="row mt-4">
+                <div class="row">
                     <div class="col-lg-4 col-sm-6 mt-5">
                         <img src="/media/foto1.jpg" alt="Imagen">
                     </div>
@@ -88,7 +107,7 @@
                         <img src="/media/foto6.jpg" alt="Imagen">
                     </div>
                 </div>
-                <div class="row mt-4">
+                <div class="row">
                     <div class="col-lg-4 col-sm-6 mt-5">
                         <img src="/media/foto1.jpg" alt="Imagen">
                     </div>
@@ -113,22 +132,110 @@
         </div>
 
 
-        <!--  Vista Card  -->
+        <!--  Vista Scroll  -->
 
-        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+        <div class="tab-pane fade" id="scroll-tab-pane" role="tabpanel" aria-labelledby="scroll-tab" tabindex="0">
 
-            <div class="container d-flex justify-content-center mt-5">
-                <div class="card" style="width: 50rem;">
-                    <div class="card-header">
-                        Featured
-                    </div>
-                    <img src="/media/foto1.jpg" class="card-img-top" alt="Imagen">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="container d-flex mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-sm-12">
+
+                        <div class="card m-4">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h4 class="m-1"><strong>Titulo de la imagen</strong></h4>
+                                <p><strong>07/09</strong></p>
+                            </div>
+                            <img src="/media/foto1.jpg" class="card-img-top" alt="Imagen">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>200 Likes</strong></h5>
+                                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum
+                                    velit saepe autem modi corporis laboriosam qui beatae soluta totam repellendus?
+                                    Praesentium repudiandae perferendis porro tempore laborum veniam necessitatibus nemo
+                                    at?
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card m-4">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h4 class="m-1"><strong>Titulo de la imagen</strong></h4>
+                                <p><strong>07/09</strong></p>
+                            </div>
+                            <img src="/media/foto2.jpg" class="card-img-top" alt="Imagen">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>200 Likes</strong></h5>
+                                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum
+                                    velit saepe autem modi corporis laboriosam qui beatae soluta totam repellendus?
+                                    Praesentium repudiandae perferendis porro tempore laborum veniam necessitatibus nemo
+                                    at?
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card m-4">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h4 class="m-1"><strong>Titulo de la imagen</strong></h4>
+                                <p><strong>07/09</strong></p>
+                            </div>
+                            <img src="/media/foto3.jpg" class="card-img-top" alt="Imagen">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>200 Likes</strong></h5>
+                                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum
+                                    velit saepe autem modi corporis laboriosam qui beatae soluta totam repellendus?
+                                    Praesentium repudiandae perferendis porro tempore laborum veniam necessitatibus nemo
+                                    at?
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card m-4">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h4 class="m-1"><strong>Titulo de la imagen</strong></h4>
+                                <p><strong>07/09</strong></p>
+                            </div>
+                            <img src="/media/foto4.jpg" class="card-img-top" alt="Imagen">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>200 Likes</strong></h5>
+                                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum
+                                    velit saepe autem modi corporis laboriosam qui beatae soluta totam repellendus?
+                                    Praesentium repudiandae perferendis porro tempore laborum veniam necessitatibus nemo
+                                    at?
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card m-4">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h4 class="m-1"><strong>Titulo de la imagen</strong></h4>
+                                <p><strong>07/09</strong></p>
+                            </div>
+                            <img src="/media/foto5.jpg" class="card-img-top" alt="Imagen">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>200 Likes</strong></h5>
+                                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum
+                                    velit saepe autem modi corporis laboriosam qui beatae soluta totam repellendus?
+                                    Praesentium repudiandae perferendis porro tempore laborum veniam necessitatibus nemo
+                                    at?
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card m-4">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h4 class="m-1"><strong>Titulo de la imagen</strong></h4>
+                                <p><strong>07/09</strong></p>
+                            </div>
+                            <img src="/media/foto6.jpg" class="card-img-top" alt="Imagen">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>200 Likes</strong></h5>
+                                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum
+                                    velit saepe autem modi corporis laboriosam qui beatae soluta totam repellendus?
+                                    Praesentium repudiandae perferendis porro tempore laborum veniam necessitatibus nemo
+                                    at?
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
